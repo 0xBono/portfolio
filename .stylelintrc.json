@@ -48,6 +48,7 @@
     "value-keyword-case": null,
     "declaration-empty-line-before": "never",
     "function-whitespace-after": "never",
-    "no-descending-specificity": null
+    "no-descending-specificity": null,
+    "no-missing-end-of-source-newline": null
   }
 }
