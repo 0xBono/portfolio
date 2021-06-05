@@ -4,12 +4,7 @@
  */
 
 import _ from 'lodash';
-import {
-  KeyboardEventHandler,
-  useCallback,
-  RefObject,
-  memo
-} from 'react';
+import { KeyboardEventHandler, useCallback, RefObject, memo } from 'react';
 
 import classnames from 'classnames/bind';
 import styles from './IconWrap.module.scss';
@@ -23,12 +18,7 @@ interface IconProps {
   forwardRef?: RefObject<HTMLSpanElement>;
 }
 
-const Icons: React.FC<IconProps> = ({
-  icon,
-  forwardRef,
-  className,
-  onClick,
-}) => {
+const Icons: React.FC<IconProps> = ({ icon, forwardRef, className, onClick }) => {
   const Component = icon;
 
   const isClickable = !!onClick;
@@ -48,14 +38,7 @@ const Icons: React.FC<IconProps> = ({
 
   if (isClickable) {
     return (
-      <span
-        className={classes}
-        ref={forwardRef}
-        onClick={onClick}
-        onKeyDown={handleKeyDown}
-        role="button"
-        tabIndex={0}
-      >
+      <span className={classes} ref={forwardRef} onClick={onClick} onKeyDown={handleKeyDown} role="button" tabIndex={0}>
         <Component />
       </span>
     );

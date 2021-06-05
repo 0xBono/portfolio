@@ -1,12 +1,8 @@
 import { FunctionComponent } from 'react';
 import BlueCircle from './svgs/BlueCircle.svg';
-import GreenCircle from './svgs/GreenCircle.svg';
-import PurpleCircle from './svgs/PurpleCircle.svg';
+import Scribble from './svgs/Scribble.svg';
 
-type Icon =
-  | 'BlueCircle'
-  | 'GreenCircle'
-  | 'PurpleCircle';
+type Icon = 'BlueCircle' | 'Scribble';
 
 type Images = {
   [key in Icon]: FunctionComponent;
@@ -14,8 +10,7 @@ type Images = {
 
 const images: Images = {
   BlueCircle,
-  GreenCircle,
-  PurpleCircle,
+  Scribble,
 };
 
 export default images;
