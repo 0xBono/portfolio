@@ -1,0 +1,17 @@
+.wrapper {
+  position: relative;
+  outline: 0;
+  border: 1px solid transparent;
+
+  &.frame {
+    padding: 0.6rem;
+  }
+
+  &.button {
+    cursor: pointer;
+  }
+
+  &:focus {
+    border: 1px solid rgb(28, 212, 126);
+  }
+}
