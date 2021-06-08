@@ -7,7 +7,7 @@ import styles from './ImageCard.module.scss';
 const cx = classNames.bind(styles);
 
 interface ImageCardProps {
-  articleId: string;
+  id: string;
   content: {
     img?: string;
     tag: string[];
@@ -18,10 +18,10 @@ interface ImageCardProps {
   to: string;
 }
 
-export const ImageCard: React.FC<ImageCardProps> = ({ articleId, content, to, ...rest }) => {
+export const ImageCard: React.FC<ImageCardProps> = ({ id, content, to, ...rest }) => {
   return (
     <Link href={to}>
-      <article id={articleId} className={cx('wrap')} {...rest}>
+      <article id={id} className={cx('wrap')} {...rest}>
         <img src={content.img} alt={content.title} className={cx('image')} />
         <div className={cx('tag-content')}>
           {_.map(content.tag, (tag, key) => (
