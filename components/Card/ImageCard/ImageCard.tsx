@@ -10,17 +10,17 @@ interface ImageCardProps {
   articleId: string;
   content: {
     img?: string;
-    tag: string | string[];
+    tag: string[];
     title: string;
-    date: Date;
+    date?: Date;
+    current?: boolean;
   };
-  to?: string;
-  slug: string;
+  to: string;
 }
 
-export const ImageCard: React.FC<ImageCardProps> = ({ articleId, content, to, slug, ...rest }) => {
+export const ImageCard: React.FC<ImageCardProps> = ({ articleId, content, to, ...rest }) => {
   return (
-    <Link href={`/${to}/${encodeURIComponent(slug)}`}>
+    <Link href={to}>
       <article id={articleId} className={cx('wrap')} {...rest}>
         <img src={content.img} alt={content.title} className={cx('image')} />
         <div className={cx('tag-content')}>
@@ -31,7 +31,7 @@ export const ImageCard: React.FC<ImageCardProps> = ({ articleId, content, to, sl
           ))}
         </div>
         <span className={cx('content-title')}>{content.title}</span>
-        <span className={cx('date')}>{content.date.toDateString()}</span>
+        <span className={cx('date')}>{content.current ? 'Current' : content.date?.toDateString()}</span>
       </article>
     </Link>
   );
