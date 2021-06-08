@@ -1,0 +1,21 @@
+.work-section {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0;
+}
+
+.content-title {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-family: 'Work Sans', sans-serif;
+  padding: 0 8px 32px;
+}
+
+.card-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  justify-content: space-between;
+  justify-items: center;
+}
