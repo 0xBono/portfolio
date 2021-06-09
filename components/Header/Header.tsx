@@ -25,9 +25,6 @@ export const Header: React.FC = () => {
           <li className={cx('navbar-item')}>
             <a href="#project">Project</a>
           </li>
-          <li className={cx('navbar-item')}>
-            <a href="mailto:iam@sonjim.in">Contact Us</a>
-          </li>
         </ul>
       </div>
     </section>
