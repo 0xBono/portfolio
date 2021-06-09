@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "clean:dist": "dist-size .next"
   },
   "dependencies": {
     "lodash": "^4.17.21",
@@ -21,6 +22,7 @@
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
     "babel-plugin-inline-react-svg": "^2.0.1",
+    "dist-size": "^0.4.0",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
@@ -33,6 +35,7 @@
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.19.0",
+    "svgo": "^2.3.0",
     "typescript": "4.3.2"
   }
 }
