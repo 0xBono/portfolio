@@ -45,6 +45,18 @@
     font-family: 'Work Sans', sans-serif;
     padding: 0 6px;
   }
+
+  @media (min-width: 280px) and (max-width: 1024px) {
+    .title {
+      font-size: 48px;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 48px;
+      text-align: center;
+    }
+  }
 }
 
 .scribble-content {
@@ -61,6 +73,14 @@
     font-family: 'Crafty Girls', cursive;
     margin-top: 16px;
   }
+
+  @media (min-width: 280px) and (max-width: 1024px) {
+    align-self: center;
+
+    .icon {
+      display: none;
+    }
+  }
 }
 
 .epilogue-content {
@@ -72,6 +92,10 @@
     font-family: 'Work Sans', sans-serif;
     line-height: 32px;
     color: #a9a9a9;
+
+    @media (min-width: 280px) and (max-width: 1024px) {
+      text-align: center;
+    }
   }
 
   .epilogue-button {
@@ -89,16 +113,20 @@
     cursor: pointer;
     transition: all 0.3s ease 0s;
 
-    & > a {
-      color: currentColor;
-      background-color: transparent;
-      text-decoration: none;
-    }
-
     &:hover {
       background-color: #000;
       color: #fff;
       transition: all 0.3s ease 0s;
+    }
+  }
+
+  & > a {
+    color: currentColor;
+    background-color: transparent;
+    text-decoration: none;
+
+    @media (min-width: 280px) and (max-width: 1024px) {
+      align-self: center;
     }
   }
 }
