@@ -13,20 +13,17 @@ export const Header: React.FC = () => {
           <li className={cx('navbar-logo-title')}>2021</li>
         </ul>
         <ul className={cx('navbar-wrap')}>
-          <li className={cx('navbar-item')}>
+          {/* <li className={cx('navbar-item')}>
             <a>About</a>
+          </li> */}
+          <li className={cx('navbar-item')}>
+            <a href="#work">Work</a>
           </li>
           <li className={cx('navbar-item')}>
-            <a>Work</a>
+            <a href="#award">Award</a>
           </li>
           <li className={cx('navbar-item')}>
-            <a>Award</a>
-          </li>
-          <li className={cx('navbar-item')}>
-            <a>Project</a>
-          </li>
-          <li className={cx('navbar-item')}>
-            <a>Contact Us</a>
+            <a href="#project">Project</a>
           </li>
         </ul>
       </div>
