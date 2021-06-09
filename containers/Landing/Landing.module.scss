@@ -11,6 +11,10 @@
   letter-spacing: 2px;
   font-family: 'Work Sans', sans-serif;
   padding: 0 8px 32px;
+
+  @media (min-width: 280px) and (max-width: 1024px) {
+    text-align: center;
+  }
 }
 
 .card-content {
@@ -19,6 +23,10 @@
   gap: 24px;
   justify-content: space-between;
   justify-items: center;
+
+  @media (min-width: 280px) and (max-width: 1024px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .slide-content {
@@ -28,12 +36,20 @@
   justify-content: space-between;
   justify-items: center;
   overflow-x: hidden;
+  @media (min-width: 280px) and (max-width: 1024px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+  }
 }
 
 .carousl-button {
   display: flex;
   position: absolute;
   right: 0;
+
+  @media (min-width: 280px) and (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .icon {
