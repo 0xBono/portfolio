@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { ReactNode } from 'react';
-import { Header } from 'components/Header';
+import { Header, Footer } from 'components';
 import classNames from 'classnames/bind';
 import styles from './GNBLayout.module.scss';
 
@@ -15,6 +15,7 @@ export const GNBLayout: React.FC<GNBLayoutProps> = ({ children }) => {
     <section className={cx('wrap')}>
       <Header />
       {children}
+      <Footer />
     </section>
   );
 };
