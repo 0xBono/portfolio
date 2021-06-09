@@ -17,16 +17,16 @@ export const Header: React.FC = () => {
             <a>About</a>
           </li>
           <li className={cx('navbar-item')}>
-            <a>Work</a>
+            <a href="#work">Work</a>
           </li>
           <li className={cx('navbar-item')}>
-            <a>Award</a>
+            <a href="#award">Award</a>
           </li>
           <li className={cx('navbar-item')}>
-            <a>Project</a>
+            <a href="#project">Project</a>
           </li>
           <li className={cx('navbar-item')}>
-            <a>Contact Us</a>
+            <a href="mailto:iam@sonjim.in">Contact Us</a>
           </li>
         </ul>
       </div>
