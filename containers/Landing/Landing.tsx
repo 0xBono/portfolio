@@ -4,7 +4,7 @@ import { GNBLayout } from 'components/Layout';
 import { Jumbotron } from 'components/Jumbotron';
 import { ImageCard } from 'components/Card';
 import { Icon, SvgPath } from 'components/Icons';
-import { Experience, Award } from './contents';
+import { Experience, Award, Project } from './contents';
 
 import classNames from 'classnames/bind';
 import styles from './Landing.module.scss';
@@ -36,7 +36,7 @@ export const Landing: React.FC = () => {
   return (
     <GNBLayout>
       <Jumbotron />
-      <section className={cx('work-section')}>
+      <section id="work" className={cx('work-section')}>
         <span className={cx('content-title')}>Work</span>
         <div className={cx('card-content')}>
           {_.map(Experience, (item, idx) => (
@@ -54,7 +54,7 @@ export const Landing: React.FC = () => {
           ))}
         </div>
       </section>
-      <section className={cx('work-section')}>
+      <section id="award" className={cx('work-section')}>
         <span className={cx('content-title')}>Award</span>
         <div className={cx('carousl-button')}>
           <Icon className={cx('icon')} icon={SvgPath.ArrowLeft} onClick={handlePrev} />
@@ -62,6 +62,23 @@ export const Landing: React.FC = () => {
         </div>
         <div ref={carouslRef} className={cx('slide-content')}>
           {_.map(Award, (item, idx) => (
+            <ImageCard
+              id={idx.toString()}
+              content={{
+                img: item.content.img,
+                tag: item.content.tag,
+                title: item.content.title,
+                date: item.content.date,
+              }}
+              to={item.to}
+            />
+          ))}
+        </div>
+      </section>
+      <section id="project" className={cx('work-section')}>
+        <span className={cx('content-title')}>Project</span>
+        <div className={cx('card-content')}>
+          {_.map(Project, (item, idx) => (
             <ImageCard
               id={idx.toString()}
               content={{
