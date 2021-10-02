@@ -22,8 +22,18 @@ export const Experience = [
       tag: ['프로그램'],
       img: '/assets/plask_logo.svg',
       title: '플라스크',
-      current: true,
+      current: false,
+      date: new Date('September 10, 2021'),
     },
     to: 'https://plask.ai/',
+  },
+  {
+    content: {
+      tag: ['인공지능'],
+      img: '/assets/rippleai_logo.svg',
+      title: '리플에이아이',
+      current: true,
+    },
+    to: 'https://rippleai.co/',
   },
 ];
